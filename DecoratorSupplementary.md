@@ -4,6 +4,8 @@ _decorator_
 - A function returning another function, usually applied as a function transformation using the @wrapper syntax. 
 
 ## Simple decorator example
+Syntatic sugar explanation
+**Every decorator is a nested function.**
 ```python
 from datetime import datetime
 
@@ -67,8 +69,8 @@ def run_only_between(from_=7, to_=22):
 
 
 @run_only_between(10, 15)
-def say_something():
-    print("Hello world")
+def say_something(message):
+    print(message)
 
 
 say_something()
