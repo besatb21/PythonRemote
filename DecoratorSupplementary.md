@@ -4,6 +4,7 @@ _decorator_
 - A function returning another function, usually applied as a function transformation using the @wrapper syntax. 
 
 ## Simple decorator example
+Syntatic sugar explanation
 ```python
 from datetime import datetime
 
