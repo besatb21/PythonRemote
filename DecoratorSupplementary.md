@@ -5,6 +5,7 @@ _decorator_
 
 ## Simple decorator example
 Syntatic sugar explanation
+**Every decorator is a nested function.**
 ```python
 from datetime import datetime
 
