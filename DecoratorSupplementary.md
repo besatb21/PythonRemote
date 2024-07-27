@@ -45,11 +45,11 @@ def run_only_between(from_=7, to_=22):
 
 
 @run_only_between(10, 15)
-def say_something(message):
-    print(message)
+def say_something():
+    print("Hello world")
 
 
-say_something("Hello world")
+say_something()
 ```
 
 ## Decorator with arguments and function with arguments
