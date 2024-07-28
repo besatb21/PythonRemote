@@ -49,9 +49,8 @@ Static methods in Python are similar to those in Java or C++.
 ### Example
 
 ```python
-class Student(Person):
-    def __init__(self, name, age, scholarship):
-        Person.__init__(self, name, age)
+class Student():
+    def __init__(self, scholarship):
         self.scholarship = scholarship
 
     def show_finance(self):
@@ -59,23 +58,19 @@ class Student(Person):
 
     @classmethod
     def create_from_string(cls, inscription):
-        name, age, scholarship = inscription.split()
-        age, scholarship = int(age), float(scholarship)
-        if cls.is_name_correct(name):
-            return cls(name, age, scholarship)
+        if cls.is_scholarship_correct(inscription):
+            return cls(inscription)
 
     @staticmethod
-    def is_name_correct(name):
-        if name[0].isupper() and len(name) > 3:
-            return True
-        return False
+    def is_scholarship_correct(scholarship):
+        return int(scholarship) > 0
 
 
-stud1 = Student("Margaret", 32, 0)
-stud2 = Student.create_from_string("Mark 21 600")
-print(stud1)
-print(stud2)
-print(Student.is_name_correct("alice"))
+stud1 = Student(3200)
+stud2 = Student.create_from_string("-8")
+print(stud1) 
+print(stud2) # None
+print(Student.is_scholarship_correct("0"))  # invoking static method outside the class definition
 ```
 
 
