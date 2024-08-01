@@ -16,6 +16,9 @@ SUMMARY
 [What is data serialization?](https://docs.python-guide.org/scenarios/serialization/)
 
 ## [Decorators](DecoratorSupplementary.md)
+## [Lambda expressions](LambdaExSupplementary.md)
+## [Generators and Iterator](GeneratorIteratorSupplementary.md)
+## [Regex](RegexSupplementary.md)
 
 
 
